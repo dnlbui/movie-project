@@ -4,7 +4,9 @@ const keys = require('../config/dev');
 
 function tokenForUser(user) {
   return jwt.encode({ sub: user.id,
+    //issued at
     iat: Math.round(Date.now() / 1000),
+    //expiration
     exp: Math.round(Date.now() / 1000 + 5 * 60 * 60)}, keys.TOKEN_SECRET)
 };
 

@@ -1,6 +1,7 @@
 import { AUTH_USER, AUTH_ERROR } from '../actions/types';
 
 const INITIAL_STATE = {
+  //storing in local storage allows user to leave app and come back authenticated without having to make a request to the server
   authenticated: localStorage.getItem('token') || '',
   errorMessage: '',
   email: null

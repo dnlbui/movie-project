@@ -69,6 +69,7 @@ export const fetchUser = () => dispatch => {
   });
 };
 
+//does not need to go to the server
 export const signout = (callback) => dispatch => {
   localStorage.removeItem('token');
 
