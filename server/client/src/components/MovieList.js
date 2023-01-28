@@ -33,6 +33,7 @@ const MovieList = ({ type }) => {
     return <Movie id={movie.id} key={id} title={movie.title} img={movie.poster_path} url={url} />
   });
 
+  //use type so that we're able to reuse a component
   if (type === 'discover') {
     return (
       <InfiniteScroll
