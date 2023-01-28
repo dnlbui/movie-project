@@ -9,7 +9,7 @@ const keys = require('./config/keys');
 
 // DB Setup
 //keys. Will server up set dependent on environment
-mongoose.connect(keys.MONGODB_URI, {
+mongoose.createConnection(keys.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
