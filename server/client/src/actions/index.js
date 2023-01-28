@@ -37,7 +37,7 @@ export const signup = (formProps, callback) => dispatch => {
 
 export const signin = (formProps, callback) => dispatch => {
   axios.post(
-    'http://localhost:5000/auth/signin',
+    '/auth/signin',
     formProps
   ).then(function (response) {
     debugger;
@@ -58,7 +58,7 @@ export const fetchUser = () => dispatch => {
   };
 
   axios.get(
-    'http://localhost:5000/auth/current_user',
+    '/auth/current_user',
     config
   ).then(function (response) {
     dispatch({ type: AUTH_USER, payload: response.data });
@@ -87,7 +87,7 @@ export const addMovieToWatchList = (movie) => dispatch => {
   };
 
   axios.post(
-    'http://localhost:5000/api/watchlist',
+    '/api/watchlist',
     { movie },
     config
   ).then(function (response) {
@@ -106,7 +106,7 @@ export const fetchWatchListMovies = () => dispatch => {
   };
 
   axios.get(
-    'http://localhost:5000/api/watchlist',
+    '/api/watchlist',
     config
   ).then(function (response) {
     dispatch({ type: FETCH_WATCHLIST_MOVIES, payload: response.data });
